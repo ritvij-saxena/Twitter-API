@@ -1,0 +1,69 @@
+Enter your responses inline below and push this file to your private GitHub
+repository.
+
+
+1. Assume I plan to use the friend_overlap function above to quantify the
+similarity of two users. E.g., because 238 is larger than 1, I conclude that
+Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald
+Trump.
+
+How is this approach misleading? How might you fix it?
+
+Jill Stein and Gary Johnson have 238 mutual friends but it is wrong to assume that Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald Trump. One case can be that Jill and Gary have 238 common friends who are either from work place or probably they are networking with people for some purpose likes votes or they are just common interest like sports, sportspersons,actors or famous personalities who support their cause or any of the above or any combination of those. This approach of quanitfying similarity on the basis of mutual friends is wrong. We will need more data to conclude that they are similar users by seeing other aspects of these individuals apart from mutual friends only like the actions they take to attract voters or charity or see their type of thinking by seeing the people / pages they follow and more. 
+
+
+
+
+
+
+2. Looking at the output of your followed_by_hillary_and_donald function, why
+do you think this user is followed by both Hilary Clinton and Donald Trump,
+who are rivals? Do some web searches to see if you can find out more
+information.
+
+While fetching the list data for this function , it was known that it consists of VP and White House. We can imply that since Hillary Clinton , Donald Trump were presidential candidates its safe to assume that they will follow White House since its the official residence and workplace of the serving president. Other thing that can be implied is that VP stands for Vice President and they follow VP since irrespective of the presidential election result , the vice president has to be present to greet and the new president and hand over the presidential workload. If we dive further in VP's background information ie; Mike Pence's information apart from being related
+to the US govt ie; past positions as Secretary of State or Governor, they both are lawyers so it can be implied that they might know each other from that link or Hillary following Mike Pence is just for monitoring his actions.
+
+
+
+
+
+3. There is a big difference in how many accounts each candidate follows (Gary
+Johnson follows over 3K accounts, while Donald Trump follows less than
+50). Why do you think this is? How might that affect our analysis?
+
+Donald Trump is known to be picky. He has the highest followers to following ratio. He only follows people who are close to him , like family, friends, his business, people who assist him in is presidency or are part of it. He generally follows people with verified accounts like NBA players, actors etc. Gary Johnson on the other hand is also a businessman so he follows many people presumably for networking purposes. Suppose if an individual X is following these people since they are part of that state or its constituency then it can be determined that 'X' is targeting this set of people for votes. However this analysis will be irrelevant if the individual X is following fake profiles thus falsfying the above conclusion of targeting certain set of people since those people might not exist or they are not who they claim to be.
+
+
+
+
+
+
+
+
+4. The follower graph we've collected is incomplete. To expand it, we would
+have to also collect the list of accounts followed by each of the
+friends. That is, for each user X that Donald Trump follows, we would have to
+also collect all the users that X follows. Assuming we again use the API call
+https://dev.twitter.com/rest/reference/get/friends/ids, how many requests will
+we have to make? Given how Twitter does rate limiting
+(https://dev.twitter.com/rest/public/rate-limiting), approximately how many
+minutes will it take to collect this data?
+
+
+From our code , we know that 
+
+found 4 users with screen_names ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
+Friends per candidate:
+DrJillStein 1643
+GovGaryJohnson 3511
+HillaryClinton 784
+realDonaldTrump 45
+
+Assuming the total friends per candidates ie, 1642+3511+784+45+4 = 5986 
+
+According to Twitter API docs we can make 15 calls / 15 minutes.
+
+So 5986/15 = 399.06 Therefore it would take total of 399.06 minutes ie; at max 7 hours.
+
+
