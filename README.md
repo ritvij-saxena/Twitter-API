@@ -1,4 +1,4 @@
-## TWITTER API
+## Sentiment Analysis using TWITTER API
 
 # Project for gathering twitter data
 
