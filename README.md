@@ -1,4 +1,4 @@
-## Sentiment Analysis using TWITTER API
+## Friend/Followers Overlap using TWITTER API
 
 # Project for gathering twitter data
 
